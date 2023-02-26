@@ -18,7 +18,7 @@ pdf_writer = PdfWriter()
 images = sorted([img for img in os.listdir(image_folder) if img.endswith(".png")], key=lambda x: int(x.split("_")[1].split(".")[0]))
 
 
-# Her resmi PDF dosyasına ekleyin
+# Add each image to PDF file
 for image in images:
     image_path = os.path.join(image_folder, image)
     with open(image_path, 'rb') as f:
